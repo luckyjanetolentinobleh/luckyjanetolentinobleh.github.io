@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rare Beauty | Product Catalog</title>
+
+<style>
+:root{
+--pink:#f6d6dc;
+--rose:#c65a73;
+--light:#fff6f7;
+--text:#444;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#fffafa;
+color:var(--text);
+}
+
+/* LOGIN */
+#login{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+width:320px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.card h2{
+color:var(--rose);
+font-family:Georgia;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:20px;
+border:1px solid #eee;
+}
+
+button{
+background:var(--rose);
+color:white;
+border:none;
+padding:10px;
+width:100%;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* CATALOG */
+
+#catalog{display:none;}
+
+.hero{
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7bmRjjJIq1nz75JG4CxpwQfosUI8yC_H9A&s");
+background-size:cover;
+background-position:center;
+padding:90px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:3em;
+font-family:Georgia;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.category{
+text-align:center;
+margin:40px 0 20px;
+}
+
+.category h2{
+background:var(--light);
+color:var(--rose);
+display:inline-block;
+padding:10px 30px;
+border-radius:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+}
+
+.product{
+background:white;
+border-radius:15px;
+padding:15px;
+text-align:center;
+border:1px solid #eee;
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:contain;
+}
+
+.name{
+font-size:0.9em;
+font-weight:bold;
+margin-top:10px;
+}
+
+.price{
+color:var(--rose);
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:40px;
+margin-top:40px;
+border-top:1px solid #eee;
+}
+
+a.btn{
+border:2px solid var(--rose);
+color:var(--rose);
+padding:8px 16px;
+border-radius:20px;
+text-decoration:none;
+margin:5px;
+display:inline-block;
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="login">
+<div class="card">
+<h2>Rare Beauty</h2>
+<p>Login to view catalog</p>
+
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+
+<button onclick="show()">Login</button>
+</div>
+</div>
+
+
+<div id="catalog">
+
+<div class="hero">
+<h1>Rare Beauty</h1>
+<p>Makeup Made to Feel Good</p>
+</div>
+
+<div class="container">
+
+<div class="category"><h2>Face</h2></div>
+
+<div class="grid">
+
+<div class="product">
+<img src="https://live.staticflickr.com/65535/51295433126_522d59a2c4_b.jpg">
+<div class="name">Liquid Touch Weightless Foundation</div>
+<div class="price">₱1,900</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRwpgZ2lfAaXa4YY7tFUAHd_bSQxyF18DexA-zfrYhvsliB23awh8zk_j_wAZL4HRP4XV1CfULzr3VfxBI6UMuZGo4UGXa30bti0OYWCeJANomPLLY-EMhS0eU">
+<div class="name">Liquid Touch Brightening Concealer</div>
+<div class="price">₱1,450</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQsgFJQGUUWSyUaWFd_qoPcn7RPXqZ79nUWT3SWJSTGn2Mn863bkTnL5vj2MTJSpuoD5eRvfE-hCiz2YPrXM-IZqbLs9iBuliNNEI4CGlYtGsHYX1PGjbbpxg">
+<div class="name">Always an Optimist Setting Spray</div>
+<div class="price">₱1,800</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRh6D4xmVheO2cXLVEwD1RTavUGmj95PAtWQ-vPLYdaqUy5IkIScYs0EkH1tr1hzqFZHLGUu2PRzpBe7w-8ADXvc9VIA2Vee_6xlAGtn2fYLPH-esLhth68xdc">
+<div class="name">Positive Light Tinted Moisturizer</div>
+<div class="price">₱1,750</div>
+</div>
+
+</div>
+
+
+<div class="category"><h2>Cheeks</h2></div>
+
+<div class="grid">
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS5LIYMbVfoBML2DAl1Z88xhMNk6U4VQmZRaE9-lahVUxfHW9lB1oddK_ZLN5l0GXR-jW1KLfOBrfVxSgeNjn5FGM0pt-FsIpat0D6LDlwPcDzmclOE8vhP">
+<div class="name">Soft Pinch Liquid Blush</div>
+<div class="price">₱1,450</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSfLb4PJL9tUTrB8vWoct-CoWIQqDRGJxF1JubAr6slqJKu7BTm3PY-bKrAaN7bjPPmn3B_T_jCqS61gGolUARBwG0a0Eb1qnvpx6pjPGb8RuiYtjoQJk8Mgg">
+<div class="name">Positive Light Liquid Luminizer</div>
+<div class="price">₱1,550</div>
+</div>
+
+</div>
+
+
+<div class="category"><h2>Lips</h2></div>
+
+<div class="grid">
+
+<div class="product">
+<img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/zoom_1_Product_840122905056-RARE-BEAUTY-Kind-Words-Matte-Lipstick-Worthy_fef0d1d0a13338973cb00176d5f88a1119c52c2f_1655140249.png">
+<div class="name">Kind Words Matte Lipstick</div>
+<div class="price">₱1,350</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQaI-snQKU9WmJTLcIcBOZx_NpHBJHYEpBqquwk9o1d5Cxh1zhQchjkxYxZpt3ijxgiXxC2atyJbsVvav8HX_ttr3XCu5FOjwm3-pHvV-ssSh6AMQZIX2HB">
+<div class="name">Soft Pinch Tinted Lip Oil</div>
+<div class="price">₱1,450</div>
+</div>
+
+<div class="product">
+<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQZnjiiH0SkWJ5pqRs6jyMJ58L0EQiuGQ4Sx_y5efhv9l4vE8m_glDLhlcsBj0JIeh-BxIS4Z-YmzGYS1R1ZEMti3E7NXP2W-Pr0mIKw5A7iycPz2mzfmFtEQ">
+<div class="name">Stay Vulnerable Glossy Lip Balm</div>
+<div class="price">₱1,350</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<a class="btn" href="https://www.rarebeauty.com">Official Website</a>
+<a class="btn" href="https://instagram.com/rarebeauty">Instagram</a>
+<p style="font-size:12px;color:#999;">© 2026 Rare Beauty</p>
+</footer>
+
+</div>
+
+<script>
+function show(){
+document.getElementById("login").style.display="none";
+document.getElementById("catalog").style.display="block";
+}
+</script>
+
+</body>
+</html>
